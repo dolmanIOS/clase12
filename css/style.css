@@ -1,0 +1,184 @@
+/* Regla general */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body - Propiedades */
+
+body{
+    background-color: black;
+}
+
+/* Fin del body */ 
+
+
+/* Header - Propiedades */
+header{
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 10%;
+}
+
+header nav ul {
+    /* GAP o Margin */
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: .5rem;
+}
+
+header nav ul li a{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+
+/* Fin header */
+
+/* Main - Propiedades */
+
+main section {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+main section div h1{
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+main section div p {
+    color: white;
+    font-size: .9rem;
+    width: 25%;
+    margin: 2rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main section div a {
+    background-color: white;
+    padding: .8rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 5px;
+}
+
+main section .containerImagen img{
+    width: 15rem;
+}
+
+/* Section Tarjetas */
+
+.containerPrincipalTarjetas {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.containerPrincipalTarjetas .containerTarjeta {
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 20%;
+}
+
+.containerPrincipalTarjetas .containerTarjeta .cabecera{
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerPrincipalTarjetas .containerTarjeta .cabecera h2 {
+    color: white;
+    font-size: .9rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.containerPrincipalTarjetas .containerTarjeta .cabecera img {
+    width: 2rem;
+}
+
+.containerPrincipalTarjetas .containerTarjeta  p {
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Footer - Propiedades */
+
+footer {
+    padding: 1rem;
+    background-color: #8F8F8F;
+}
+
+footer p {
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+/* Fin footer */
+
+
+/* Medias queries */ 
+
+@media screen and (max-width: 1024px){
+
+    header img {
+        width: 25%;
+    }
+
+    main section div p{
+        width: 50%;
+        background-color: red;
+    }
+    .containerPrincipalTarjetas .containerTarjeta{
+        background-color: blue;
+        margin: 0 .5rem;
+        width: 50%;
+    }
+    
+}
+
+@media (max-width: 650px){
+    header nav {
+        display: none;
+    }
+    header {
+        flex-direction: column-reverse;
+    }
+
+    main section {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    main section div p {
+        width: 100%;
+    }
+    main section div {
+        text-align: center;
+    }
+
+    .containerPrincipalTarjetas{
+        flex-wrap: wrap;
+    }
+    .containerPrincipalTarjetas .containerTarjeta{
+        margin: 1rem ;
+    }
+}
